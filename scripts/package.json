@@ -1,0 +1,16 @@
+{
+  "name": "telegram-channel-poster",
+  "version": "1.0.0",
+  "description": "Скрипты для постинга в Telegram канал с WebApp кнопкой",
+  "main": "post_to_channel.js",
+  "scripts": {
+    "post": "node post_to_channel.js",
+    "start": "node post_to_channel.js"
+  },
+  "keywords": ["telegram", "bot", "channel", "webapp"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.66.0"
+  }
+}
