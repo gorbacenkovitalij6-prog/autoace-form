@@ -13,7 +13,7 @@ export default function Snowfall() {
   }>>([]);
 
   useEffect(() => {
-    const flakes = Array.from({ length: 120 }, (_, i) => {
+    const flakes = Array.from({ length: 40 }, (_, i) => {
       const size = 0.5 + Math.random() * 1.5; // размер от 0.5 до 2
       return {
         id: i,

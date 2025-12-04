@@ -29,7 +29,7 @@ export default function Home() {
 
 
 
-        <div className="max-w-2xl mx-auto relative z-10 py-12 px-4">
+        <div className="max-w-7xl mx-auto relative z-10 py-12 px-4">
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center mb-6">
               <div className="relative w-56 h-56 rounded-full overflow-hidden bg-white/20 border-4 border-yellow-400 glow-effect backdrop-blur-md shadow-2xl">
@@ -65,17 +65,21 @@ export default function Home() {
           {/* Countdown Timer */}
           <Countdown />
 
-          <div className="relative">
-            <AutoSurveyForm />
-          </div>
+          {/* Two Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            {/* Left Column - Form */}
+            <div className="relative">
+              <AutoSurveyForm />
+            </div>
 
-          <div className="mt-8 text-center space-y-4">
-            <div className="bg-gradient-to-r from-green-800/80 to-green-900/80 backdrop-blur-md rounded-2xl px-8 py-6 border-3 border-yellow-400/70 shadow-2xl">
-              <p className="text-3xl font-bold text-yellow-300 mb-4 drop-shadow-lg" style={{
-                textShadow: '0 0 15px rgba(255,215,0,1), 0 0 25px rgba(255,215,0,0.5)'
-              }}>
-                Новогодний конкурс!
-              </p>
+            {/* Right Column - Contest and Contacts */}
+            <div className="space-y-6">
+              <div className="bg-gradient-to-r from-green-800/80 to-green-900/80 backdrop-blur-md rounded-2xl px-8 py-6 border-3 border-yellow-400/70 shadow-2xl">
+                <p className="text-3xl font-bold text-yellow-300 mb-4 drop-shadow-lg text-center" style={{
+                  textShadow: '0 0 15px rgba(255,215,0,1), 0 0 25px rgba(255,215,0,0.5)'
+                }}>
+                  Новогодний конкурс!
+                </p>
               <div className="bg-white/10 rounded-xl p-5 mb-4 border-2 border-yellow-400/40">
                 <p className="text-2xl font-bold text-white mb-3">
                   Розыгрыш комплекта зимней резины
@@ -102,15 +106,15 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <p className="text-base text-white/95 font-medium">
-                Все заявки обрабатываются в течение 24 часов
-              </p>
-            </div>
+                <p className="text-base text-white/95 font-medium text-center">
+                  Все заявки обрабатываются в течение 24 часов
+                </p>
+              </div>
 
-            <div className="bg-gradient-to-r from-red-800/80 to-red-900/80 backdrop-blur-md rounded-2xl px-8 py-5 border-3 border-yellow-400/70 shadow-2xl">
-              <p className="text-white font-bold text-xl mb-4">
-                Свяжитесь с нами:
-              </p>
+              <div className="bg-gradient-to-r from-red-800/80 to-red-900/80 backdrop-blur-md rounded-2xl px-8 py-5 border-3 border-yellow-400/70 shadow-2xl">
+                <p className="text-white font-bold text-xl mb-4 text-center">
+                  Свяжитесь с нами:
+                </p>
               <div className="flex items-center justify-center gap-6 text-base flex-wrap">
                 <a
                   href="https://t.me/Kostya_managerr"
@@ -135,9 +139,9 @@ export default function Home() {
                   @Ksenya_auto
                 </a>
               </div>
+              </div>
             </div>
           </div>
-
 
         </div>
       </main>
