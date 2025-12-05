@@ -56,18 +56,41 @@ export default function Home() {
 
           {/* Contest Block at Top */}
           <div className="bg-gradient-to-r from-green-800/80 to-green-900/80 backdrop-blur-md rounded-2xl px-6 py-4 border-3 border-yellow-400/70 shadow-2xl mb-4">
-            <div className="flex items-center justify-between gap-6">
+            <div className="flex items-start justify-between gap-6">
               <div className="flex-1">
-                <p className="text-2xl font-bold text-yellow-300 mb-2 drop-shadow-lg" style={{
+                <p className="text-2xl font-bold text-yellow-300 mb-3 drop-shadow-lg" style={{
                   textShadow: '0 0 15px rgba(255,215,0,1), 0 0 25px rgba(255,215,0,0.5)'
                 }}>
                   🎁 Новогодний конкурс!
                 </p>
-                <p className="text-lg font-bold text-white mb-1">
-                  Розыгрыш комплекта зимней резины
-                </p>
-                <p className="text-sm text-yellow-200 font-semibold">
-                  Премиальные шины до 80,000 руб! Розыгрыш 31 декабря в прямом эфире
+                <div className="bg-white/10 rounded-xl p-4 mb-3 border-2 border-yellow-400/40">
+                  <p className="text-xl font-bold text-white mb-2">
+                    Розыгрыш комплекта зимней резины
+                  </p>
+                  <p className="text-base text-yellow-200 font-semibold mb-3">
+                    Премиальные шины стоимостью до 80,000 руб!
+                  </p>
+                  <div className="text-left text-white/90 space-y-1.5 text-sm">
+                    <p className="flex items-start gap-2">
+                      <span className="text-yellow-400 font-bold min-w-[16px]">•</span>
+                      <span>Участвуют все заявки, оставленные в декабре 2024</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <span className="text-yellow-400 font-bold min-w-[16px]">•</span>
+                      <span>Розыгрыш проводится 31 декабря в прямом эфире</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <span className="text-yellow-400 font-bold min-w-[16px]">•</span>
+                      <span>Победитель получает сертификат на любой комплект зимних шин</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <span className="text-yellow-400 font-bold min-w-[16px]">•</span>
+                      <span>Чем раньше оставите заявку — тем больше шансов!</span>
+                    </p>
+                  </div>
+                </div>
+                <p className="text-sm text-white/95 font-medium text-center">
+                  Все заявки обрабатываются в течение 24 часов
                 </p>
               </div>
               <div className="flex-shrink-0">
