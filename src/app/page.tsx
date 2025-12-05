@@ -27,92 +27,57 @@ export default function Home() {
         {/* Christmas Lights Border */}
         <div className="fixed top-0 left-0 right-0 h-3 bg-gradient-to-r from-red-500 via-green-500 via-yellow-500 via-blue-500 to-red-500 christmas-lights opacity-90 z-40 shadow-lg"></div>
 
-
-
-        <div className="max-w-7xl mx-auto relative z-10 py-12 px-4">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center mb-6">
-              <div className="relative w-56 h-56 rounded-full overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border-4 border-yellow-400 glow-effect shadow-2xl">
+        <div className="max-w-7xl mx-auto relative z-10 py-4 px-4">
+          {/* Compact Header */}
+          <div className="text-center mb-4">
+            <div className="inline-flex items-center justify-center mb-2">
+              <div className="relative w-32 h-32 rounded-full overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border-4 border-yellow-400 glow-effect shadow-2xl">
                 <Image
                   src="/logo.png"
                   alt="AutoEuropeTop - Cars From Europe"
-                  width={224}
-                  height={224}
+                  width={128}
+                  height={128}
                   className="object-cover w-full h-full"
                 />
               </div>
             </div>
 
-            <div className="relative w-full flex flex-col items-center">
-              <h1 className="text-6xl font-bold text-white tracking-wide drop-shadow-2xl text-center mb-3" style={{
-                textShadow: '0 0 20px rgba(255,215,0,1), 0 0 40px rgba(255,215,0,0.7), 3px 3px 6px rgba(0,0,0,0.8)'
-              }}>
-                Автомобили из Европы!
-              </h1>
-              <p className="text-3xl font-bold text-yellow-300 drop-shadow-xl text-center mb-4" style={{
-                textShadow: '0 0 15px rgba(255,215,0,1), 3px 3px 6px rgba(0,0,0,0.8)'
-              }}>
-                С Новым Годом!
-              </p>
-              <div className="w-full flex justify-center">
-                <p className="text-white text-xl font-semibold bg-gradient-to-r from-red-600/90 to-green-700/90 backdrop-blur-md rounded-2xl px-8 py-4 border-3 border-yellow-400/70 shadow-2xl text-center">
-                  Подарите себе автомобиль мечты к празднику!
-                </p>
-              </div>
-            </div>
+            <h1 className="text-4xl font-bold text-white tracking-wide drop-shadow-2xl text-center mb-2" style={{
+              textShadow: '0 0 20px rgba(255,215,0,1), 0 0 40px rgba(255,215,0,0.7), 3px 3px 6px rgba(0,0,0,0.8)'
+            }}>
+              Автомобили из Европы!
+            </h1>
+            <p className="text-2xl font-bold text-yellow-300 drop-shadow-xl text-center mb-2" style={{
+              textShadow: '0 0 15px rgba(255,215,0,1), 3px 3px 6px rgba(0,0,0,0.8)'
+            }}>
+              С Новым Годом!
+            </p>
           </div>
 
-          {/* Countdown Timer */}
-          <Countdown />
-
-          {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            {/* Left Column - Form */}
-            <div className="relative">
-              <AutoSurveyForm />
-            </div>
-
-            {/* Right Column - Contest and Contacts */}
-            <div className="space-y-6">
-              <div className="bg-gradient-to-r from-green-800/80 to-green-900/80 backdrop-blur-md rounded-2xl px-8 py-6 border-3 border-yellow-400/70 shadow-2xl">
-                <p className="text-3xl font-bold text-yellow-300 mb-4 drop-shadow-lg text-center" style={{
+          {/* Contest Block at Top */}
+          <div className="bg-gradient-to-r from-green-800/80 to-green-900/80 backdrop-blur-md rounded-2xl px-6 py-4 border-3 border-yellow-400/70 shadow-2xl mb-4">
+            <div className="flex items-center justify-between gap-6">
+              <div className="flex-1">
+                <p className="text-2xl font-bold text-yellow-300 mb-2 drop-shadow-lg" style={{
                   textShadow: '0 0 15px rgba(255,215,0,1), 0 0 25px rgba(255,215,0,0.5)'
                 }}>
-                  Новогодний конкурс!
+                  🎁 Новогодний конкурс!
                 </p>
-              <div className="bg-white/10 rounded-xl p-5 mb-4 border-2 border-yellow-400/40">
-                <p className="text-2xl font-bold text-white mb-3">
+                <p className="text-lg font-bold text-white mb-1">
                   Розыгрыш комплекта зимней резины
                 </p>
-                <p className="text-lg text-yellow-200 font-semibold mb-2">
-                  Премиальные шины стоимостью до 80,000 руб!
+                <p className="text-sm text-yellow-200 font-semibold">
+                  Премиальные шины до 80,000 руб! Розыгрыш 31 декабря в прямом эфире
                 </p>
-                <div className="text-left text-white/90 space-y-2 max-w-xl mx-auto">
-                  <p className="flex items-start gap-2">
-                    <span className="text-yellow-400 font-bold min-w-[20px]">•</span>
-                    <span>Участвуют все заявки, оставленные в декабре 2024</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <span className="text-yellow-400 font-bold min-w-[20px]">•</span>
-                    <span>Розыгрыш проводится 31 декабря в прямом эфире</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <span className="text-yellow-400 font-bold min-w-[20px]">•</span>
-                    <span>Победитель получает сертификат на любой комплект зимних шин</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <span className="text-yellow-400 font-bold min-w-[20px]">•</span>
-                    <span>Чем раньше оставите заявку — тем больше шансов!</span>
-                  </p>
-                </div>
               </div>
-                <p className="text-base text-white/95 font-medium text-center">
-                  Все заявки обрабатываются в течение 24 часов
-                </p>
+              <div className="flex-shrink-0">
+                <Countdown />
               </div>
             </div>
           </div>
 
+          {/* Form Section */}
+          <AutoSurveyForm />
         </div>
       </main>
     </>
