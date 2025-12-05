@@ -9,9 +9,10 @@ exports.handler = async (event) => {
   try {
     const data = JSON.parse(event.body || "{}");
     const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-    const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+    const TELEGRAM_CHAT_ID_1 = process.env.TELEGRAM_CHAT_ID_1;
+    const TELEGRAM_CHAT_ID_2 = process.env.TELEGRAM_CHAT_ID_2;
 
-    if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
+    if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID_1 || !TELEGRAM_CHAT_ID_2) {
       console.error("Missing Telegram credentials");
       return {
         statusCode: 500,
@@ -69,23 +70,44 @@ ${data.mileage ? `Пробег: ${data.mileage}` : ""}
 
 ${data.additionalInfo ? `💬 <b>Дополнительно:</b>\n${data.additionalInfo}` : ""}`;
 
-    const telegramResponse = await fetch(
+    // Отправка сообщения первому пользователю
+    const telegramResponse1 = await fetch(
       `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          chat_id: TELEGRAM_CHAT_ID,
+          chat_id: TELEGRAM_CHAT_ID_1,
           text: message,
           parse_mode: "HTML",
         }),
       }
     );
 
-    if (!telegramResponse.ok) {
-      const errorData = await telegramResponse.json();
-      console.error("Telegram API error:", errorData);
-      throw new Error("Failed to send message to Telegram");
+    if (!telegramResponse1.ok) {
+      const errorData = await telegramResponse1.json();
+      console.error("Telegram API error (user 1):", errorData);
+      throw new Error("Failed to send message to Telegram user 1");
+    }
+
+    // Отправка сообщения второму пользователю
+    const telegramResponse2 = await fetch(
+      `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: TELEGRAM_CHAT_ID_2,
+          text: message,
+          parse_mode: "HTML",
+        }),
+      }
+    );
+
+    if (!telegramResponse2.ok) {
+      const errorData = await telegramResponse2.json();
+      console.error("Telegram API error (user 2):", errorData);
+      throw new Error("Failed to send message to Telegram user 2");
     }
 
     return {
