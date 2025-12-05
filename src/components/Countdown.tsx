@@ -33,38 +33,38 @@ export default function Countdown() {
   }, []);
 
   return (
-    <div className="flex gap-2">
-      <div className="text-center bg-red-600/30 rounded-lg px-3 py-2 border-2 border-yellow-400/40">
-        <div className="text-2xl font-bold text-white drop-shadow-xl" style={{
+    <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
+      <div className="text-center bg-red-600/30 rounded-xl px-4 py-4 border-2 border-yellow-400/40">
+        <div className="text-4xl font-bold text-white drop-shadow-xl" style={{
           textShadow: '0 0 15px rgba(255,215,0,1)'
         }}>
           {timeLeft.days}
         </div>
-        <div className="text-xs text-yellow-200 font-semibold">дней</div>
+        <div className="text-sm text-yellow-200 font-semibold mt-1">дней</div>
       </div>
-      <div className="text-center bg-green-600/30 rounded-lg px-3 py-2 border-2 border-yellow-400/40">
-        <div className="text-2xl font-bold text-white drop-shadow-xl" style={{
+      <div className="text-center bg-green-600/30 rounded-xl px-4 py-4 border-2 border-yellow-400/40">
+        <div className="text-4xl font-bold text-white drop-shadow-xl" style={{
           textShadow: '0 0 15px rgba(255,215,0,1)'
         }}>
           {timeLeft.hours}
         </div>
-        <div className="text-xs text-yellow-200 font-semibold">часов</div>
+        <div className="text-sm text-yellow-200 font-semibold mt-1">часов</div>
       </div>
-      <div className="text-center bg-blue-600/30 rounded-lg px-3 py-2 border-2 border-yellow-400/40">
-        <div className="text-2xl font-bold text-white drop-shadow-xl" style={{
+      <div className="text-center bg-blue-600/30 rounded-xl px-4 py-4 border-2 border-yellow-400/40">
+        <div className="text-4xl font-bold text-white drop-shadow-xl" style={{
           textShadow: '0 0 15px rgba(255,215,0,1)'
         }}>
           {timeLeft.minutes}
         </div>
-        <div className="text-xs text-yellow-200 font-semibold">минут</div>
+        <div className="text-sm text-yellow-200 font-semibold mt-1">минут</div>
       </div>
-      <div className="text-center bg-purple-600/30 rounded-lg px-3 py-2 border-2 border-yellow-400/40">
-        <div className="text-2xl font-bold text-white drop-shadow-xl" style={{
+      <div className="text-center bg-purple-600/30 rounded-xl px-4 py-4 border-2 border-yellow-400/40">
+        <div className="text-4xl font-bold text-white drop-shadow-xl" style={{
           textShadow: '0 0 15px rgba(255,215,0,1)'
         }}>
           {timeLeft.seconds}
         </div>
-        <div className="text-xs text-yellow-200 font-semibold">секунд</div>
+        <div className="text-sm text-yellow-200 font-semibold mt-1">секунд</div>
       </div>
     </div>
   );

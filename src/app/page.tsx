@@ -56,14 +56,15 @@ export default function Home() {
 
           {/* Contest Block at Top */}
           <div className="bg-gradient-to-r from-green-800/80 to-green-900/80 backdrop-blur-md rounded-2xl px-6 py-4 border-3 border-yellow-400/70 shadow-2xl mb-4">
-            <div className="flex items-start justify-between gap-6">
-              <div className="flex-1">
-                <p className="text-2xl font-bold text-yellow-300 mb-3 drop-shadow-lg" style={{
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Left Side - Contest Description */}
+              <div className="flex flex-col justify-center">
+                <p className="text-2xl font-bold text-yellow-300 mb-3 drop-shadow-lg text-center" style={{
                   textShadow: '0 0 15px rgba(255,215,0,1), 0 0 25px rgba(255,215,0,0.5)'
                 }}>
                   🎁 Новогодний конкурс!
                 </p>
-                <div className="bg-white/10 rounded-xl p-4 mb-3 border-2 border-yellow-400/40">
+                <div className="bg-white/10 rounded-xl p-4 border-2 border-yellow-400/40">
                   <p className="text-xl font-bold text-white mb-2">
                     Розыгрыш комплекта зимней резины
                   </p>
@@ -89,11 +90,18 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <p className="text-sm text-white/95 font-medium text-center">
+                <p className="text-sm text-white/95 font-medium text-center mt-3">
                   Все заявки обрабатываются в течение 24 часов
                 </p>
               </div>
-              <div className="flex-shrink-0">
+
+              {/* Right Side - Countdown Timer */}
+              <div className="flex flex-col items-center justify-center">
+                <p className="text-yellow-300 font-bold text-xl mb-4 drop-shadow-lg text-center" style={{
+                  textShadow: '0 0 10px rgba(255,215,0,0.8)'
+                }}>
+                  До Нового 2025 Года:
+                </p>
                 <Countdown />
               </div>
             </div>
