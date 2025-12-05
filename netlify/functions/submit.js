@@ -8,12 +8,12 @@ exports.handler = async (event) => {
 
   try {
     const data = JSON.parse(event.body || "{}");
-    const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-    const TELEGRAM_CHAT_ID_1 = process.env.TELEGRAM_CHAT_ID_1;
-    const TELEGRAM_CHAT_ID_2 = process.env.TELEGRAM_CHAT_ID_2;
+    const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || "7618267488:AAEkrL_mLc9yIMhebIoQ7jerTTWDzelHwNs";
+    const TELEGRAM_CHAT_ID_1 = process.env.TELEGRAM_CHAT_ID_1 || "7552690430";
+    const TELEGRAM_CHAT_ID_2 = process.env.TELEGRAM_CHAT_ID_2 || "6947421295";
 
-    if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID_1 || !TELEGRAM_CHAT_ID_2) {
-      console.error("Missing Telegram credentials");
+    if (!TELEGRAM_BOT_TOKEN) {
+      console.error("Missing Telegram bot token");
       return {
         statusCode: 500,
         body: JSON.stringify({ error: "Server configuration error" }),
